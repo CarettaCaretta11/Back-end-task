@@ -13,7 +13,7 @@ Username
 
 
 # Second task
-In My account page there should be user quiz page where there are 3 fields:
+In My account page there should be quiz where there are 3 fields:
 
 Your age
 Your weight
