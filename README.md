@@ -9,12 +9,11 @@ Create 2 simple web pages.
 
 The first page is sign-up/login page where users should add username and password.
 After logging in, user should see My account page where there is data about:
-Username as well as weight, height, and age of the user which should be taken fron the database
+Username
 
 
 # Second task
-
-The second page should be user quiz page where there are 3 fields:
+In My account page there should be user quiz page where there are 3 fields:
 
 Your age
 Your weight
@@ -22,7 +21,7 @@ Your height
 
 submit button
 
-When user fills these fields, the data should be sent to the database
+When user fills these fields, the data should be sent to the database and these datas should be added to the My account page below username
 
 
 Note: As you are a back-end developer, there is no need to play with design of html pages, just make a very simple form
