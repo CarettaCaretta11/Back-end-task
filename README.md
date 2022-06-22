@@ -5,13 +5,14 @@ This is a technical back end task for the developers To pass this stage, complet
 Create 2 simple web pages.
 
 
-
+# First task
 
 The first page is sign-up/login page where users should add username and password.
 After logging in, user should see My account page where there is data about:
 Username as well as weight, height, and age of the user which should be taken fron the database
 
 
+# Second task
 
 The second page should be user quiz page where there are 3 fields:
 
