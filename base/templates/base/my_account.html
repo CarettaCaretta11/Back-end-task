@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% if request.user == user %}
+    <h2>My Profile</h2>
+    {% endif %}
+    <img width="50px" height="50px" src="https://res.cloudinary.com/dn3laf4bh/image/upload/v1647623057/avatar_iu9mmi.svg" id="haha1"/>
+
+    <h3>@{{user.username}}</h3>
+
+        <h3>About</h3>
+        <form method='POST' action="">
+        {% csrf_token %}
+            {% if user.age %}
+                <p>
+                    Age: {{user.age}}
+                </p>
+            {% elif request.user == user %}
+                <br>    
+                <input type="text" name="user_age" placeholder="Your age" autocomplete="off"/>
+                <br>
+            {% endif %}
+            {% if user.weight %}
+                <p>
+                    Weight (kilograms): {{user.weight}}
+                </p>
+            {% elif request.user == user %}
+                <br>
+                <input type="text" name="user_weight" placeholder="Your weight" autocomplete="off"/>
+                <br>
+            {% endif %}
+            {% if user.height %}
+                <p>
+                    Height (metres): {{user.height}}
+                </p>
+            {% elif request.user == user %}
+                <br>
+                <input type="text" name="user_height" placeholder="Your height" autocomplete="off"/>
+                <br>
+            {% endif %}
+            {% if not user.completed_quiz and request.user == user %}
+            <br>
+            <button class="btn btn--main" type="submit">Submit</button>
+            {% endif %}
+            {% if request.user != user and not user.age and not user.weight and not user.height %}
+            <p>No info for now!</p>
+            {% endif %}
+        </form>
+
+{% endblock %}
